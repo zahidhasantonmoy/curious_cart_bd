@@ -102,6 +102,10 @@ export default function Home() {
           </div>
         </section>
 
+        <Testimonials />
+
+        <Faq />
+
         <section id="buy-now" className="my-12 text-center">
           <h2 className="text-3xl font-bold mb-4">এখনই অর্ডার করুন!</h2>
           <p className="text-xl mb-8">এই সুন্দর এবং অর্থবহ উপহারটি আপনার নিজের এবং প্রিয়জনের জন্য।</p>
