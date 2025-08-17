@@ -111,7 +111,10 @@ export default function Home() {
         <section id="buy-now" className="my-12 text-center">
           <h2 className="text-3xl font-bold mb-4">এখনই অর্ডার করুন!</h2>
           <p className="text-xl mb-8">এই সুন্দর এবং অর্থবহ উপহারটি আপনার নিজের এবং প্রিয়জনের জন্য।</p>
-          <button className="bg-brand-accent hover:bg-brand-accent-dark text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300">
+          <button 
+            onClick={() => addToCart(product)}
+            className="bg-brand-accent hover:bg-brand-accent-dark text-white font-bold py-3 px-8 rounded-full text-lg transition duration-300"
+          >
             Add to Cart
           </button>
         </section>
