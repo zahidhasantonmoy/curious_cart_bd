@@ -9,6 +9,7 @@ interface Product {
   image: string;
   category: string;
   variants?: Variant[]; // Added variants field
+  stock: number;
 }
 
 interface Variant {
