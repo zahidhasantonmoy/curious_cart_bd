@@ -35,7 +35,6 @@ export default function Header() {
         <Link href="/" className="text-2xl font-bold text-gray-800">Curious Cart BD</Link>
         <div>
           <Link href="/" className="mx-2 text-gray-800 hover:text-gray-600">Home</Link>
-          <Link href="/admin" className="mx-2 text-gray-800 hover:text-gray-600">Admin</Link>
           <Link href="/about" className="mx-2 text-gray-800 hover:text-gray-600">About Us</Link>
           <Link href="/cart" className="mx-2 text-gray-800 hover:text-gray-600">Cart</Link>
           {isLoggedIn ? (
