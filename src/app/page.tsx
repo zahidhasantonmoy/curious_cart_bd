@@ -24,7 +24,18 @@ const slideImages = [
   },
 ];
 
+import { useCart } from '@/context/CartContext';
+
 export default function Home() {
+  const { addToCart } = useCart();
+
+  const product = {
+    id: 1,
+    name: 'প্রশান্তির দোয়া জার',
+    price: 500, // Please update the price
+    image: '/images/dua-jar.png',
+    stock: 100, // Please update the stock
+  };
   return (
     <div>
       <Header />
