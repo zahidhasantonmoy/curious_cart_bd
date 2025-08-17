@@ -54,7 +54,7 @@ export default function Home() {
               {slideImages.map((slideImage, index)=> (
                 <div className="each-slide-effect" key={index}>
                   <div style={{ 'backgroundImage': `url(${slideImage.url})` }}>
-                    <span>{slideImage.caption}</span>
+                    
                   </div>
                 </div>
               ))}
