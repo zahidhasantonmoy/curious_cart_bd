@@ -2,6 +2,7 @@
 
 import { useCart } from '@/context/CartContext';
 import Link from 'next/link';
+import Header from '@/components/Header';
 
 export default function CartPage() {
   const { cart, removeFromCart, clearCart } = useCart();
