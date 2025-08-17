@@ -32,7 +32,9 @@ export default function Header() {
   return (
     <header className="bg-white shadow-md">
       <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold text-gray-800">Curious Cart BD</Link>
+        <Link href="/">
+          <Image src="/images/logo.jpg" alt="Curious Cart BD Logo" width={150} height={50} />
+        </Link>
         <div>
           <Link href="/" className="mx-2 text-gray-800 hover:text-gray-600">Home</Link>
           <Link href="/about" className="mx-2 text-gray-800 hover:text-gray-600">About Us</Link>
