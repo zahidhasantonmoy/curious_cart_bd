@@ -7,6 +7,7 @@ import './slideshow.css';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
 import Footer from '@/components/Footer';
+import SocialShare from '@/components/SocialShare';
 
 const slideImages = [
   {
