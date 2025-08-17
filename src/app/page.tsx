@@ -6,6 +6,7 @@ import 'react-slideshow-image/dist/styles.css';
 import './slideshow.css';
 import Testimonials from '@/components/Testimonials';
 import Faq from '@/components/Faq';
+import Footer from '@/components/Footer';
 
 const slideImages = [
   {
