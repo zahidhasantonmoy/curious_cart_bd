@@ -9,7 +9,7 @@ async function getUsers() {
     const data = await fs.readFile(usersFilePath, 'utf-8');
     return JSON.parse(data);
   } catch (error) {
-    if (error.code === 'ENOENT') {
+    if (typeof error === 'object' && error !== null && 'code' in error && (error as NodeJS.ErrnoException).code === 'ENOENT') {
       return []; // File not found, return empty array
     }
     throw error;

@@ -9,7 +9,7 @@ async function getReviews() {
     const data = await fs.readFile(reviewsFilePath, 'utf-8');
     return JSON.parse(data);
   } catch (error) {
-    if (error.code === 'ENOENT') {
+    if (typeof error === 'object' && error !== null && 'code' in error && (error as NodeJS.ErrnoException).code === 'ENOENT') {
       return []; // File not found, return empty array
     }
     throw error;
