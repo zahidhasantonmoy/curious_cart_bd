@@ -1,0 +1,32 @@
+🚀 Just completed an exciting full-stack e-commerce project - Curious Cart BD! 
+
+I'm proud to share my latest project: an innovative e-commerce platform built with Next.js, React, and TypeScript. This isn't just another online store - it's a thoughtful solution that combines technology with emotional wellness.
+
+✨ Key Features I Developed:
+• Responsive UI/UX with Tailwind CSS
+• Full cart & wishlist functionality with React Context API
+• Product management system with dynamic variants
+• Social sharing capabilities with react-share
+• Interactive image slideshow with react-slideshow-image
+• RESTful API endpoints for product data
+• Secure authentication system
+
+💼 What Makes This Project Special:
+Curious Cart BD features a unique product - the "Prashanti Dua Jar" - designed to bring peace and mindfulness to people's daily lives. Each jar contains 50+ color-coded prayer scrolls for different emotional states, housed in an elegant glass container. 
+
+This project showcases my skills in:
+• Full-stack web development (Next.js/React/TypeScript)
+• Modern UI/UX implementation with Tailwind CSS
+• State management with Context API
+• API development and integration
+• E-commerce functionality (cart, checkout, product management)
+• Responsive design principles
+
+🔧 Tech Stack: Next.js, React, TypeScript, Tailwind CSS, REST API
+
+🌐 Live Site: https://curiouscart.vercel.app/
+📁 GitHub Repo: https://github.com/zahidhasantonmoy/curious_cart_bd
+
+I'm excited to continue building meaningful digital experiences that connect with people on a deeper level. Feel free to check out the live site and let me know your thoughts!
+
+#NextJS #React #TypeScript #Ecommerce #WebDevelopment #FullStack #TailwindCSS #Programming #Tech #Developer #Code #JavaScript #Frontend #Backend #UIUX
