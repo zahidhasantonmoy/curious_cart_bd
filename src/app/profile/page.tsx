@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 export default function ProfilePage() {
   const [username, setUsername] = useState('');
@@ -12,7 +14,7 @@ export default function ProfilePage() {
     const storedUsername = localStorage.getItem('currentUser');
 
     if (!userToken || !storedUsername) {
-      router.push('/login'); // Redirect to login if not authenticated
+      router.push('/login');
     } else {
       setUsername(storedUsername);
     }
@@ -21,7 +23,7 @@ export default function ProfilePage() {
   const handleLogout = () => {
     localStorage.removeItem('userToken');
     localStorage.removeItem('currentUser');
-    router.push('/'); // Redirect to home after logout
+    router.push('/');
   };
 
   if (!username) {
@@ -29,47 +31,24 @@ export default function ProfilePage() {
   }
 
   return (
-    <div className="min-h-screen bg-gray-100">
-      <header className="bg-white shadow-md">
-        <nav className="container mx-auto px-6 py-3 flex justify-between items-center">
-          <a href="/" className="text-2xl font-bold text-gray-800">Curious Cart BD</a>
-          <div>
-            <a href="/" className="mx-2 text-gray-800 hover:text-gray-600">Home</a>
-            <a href="/admin" className="mx-2 text-gray-800 hover:text-gray-600">Admin</a>
-            <a href="/about" className="mx-2 text-gray-800 hover:text-gray-600">About Us</a>
-            <a href="/cart" className="mx-2 text-gray-800 hover:text-gray-600">Cart</a>
-            <a href="/profile" className="mx-2 text-gray-800 hover:text-gray-600">Profile</a>
-            <button onClick={handleLogout} className="mx-2 text-gray-800 hover:text-gray-600 bg-transparent border-none cursor-pointer">Logout</button>
-          </div>
-        </nav>
-      </header>
+    <div className="flex flex-col min-h-screen">
+      <Header />
 
-      <main className="container mx-auto px-6 py-8">
-        <h1 className="text-3xl font-bold text-center mb-8">User Profile</h1>
-        <div className="bg-white p-8 rounded-lg shadow-md w-full max-w-md mx-auto">
-          <p className="text-xl mb-4">Welcome, <span className="font-semibold">{username}</span>!</p>
-          <p className="text-gray-600">This is your profile page. More details and options will be available here soon.</p>
+      <main className="container mx-auto px-6 py-12 flex-grow max-w-lg">
+        <h1 className="text-3xl font-bold text-center mb-8 text-gray-800">User Profile</h1>
+        <div className="bg-white p-8 rounded-2xl shadow-sm border border-gray-200">
+          <p className="text-xl mb-3 text-gray-800">Welcome back, <span className="font-bold text-brand-primary">{username}</span>!</p>
+          <p className="text-gray-600 mb-6">আপনার অ্যাকাউন্ট সক্রিয় আছে। শীঘ্রই এখানে আপনার পূর্বের অর্ডার ইতিহাস দেখতে পাবেন।</p>
           <button
             onClick={handleLogout}
-            className="mt-6 bg-red-500 hover:bg-red-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+            className="w-full bg-red-500 hover:bg-red-600 text-white font-bold py-2.5 px-4 rounded-xl transition"
           >
-            Logout
+            লগআউট (Logout)
           </button>
         </div>
       </main>
 
-      <footer className="bg-gray-800 text-white py-6 mt-6">
-        <div className="container mx-auto px-6 text-center">
-          <p>&copy; 2025 Curious Cart BD. All Rights Reserved.</p>
-          <div className="mt-4">
-            <p>Contact: +880 1234 567890</p>
-            <div className="flex justify-center space-x-4 mt-2">
-              <a href="https://facebook.com/curiouscartbd" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">Facebook</a>
-              <a href="https://instagram.com/curiouscartbd" target="_blank" rel="noopener noreferrer" className="hover:text-pink-400">Instagram</a>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

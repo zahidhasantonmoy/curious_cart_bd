@@ -1,3 +1,4 @@
+'use client';
 
 import Link from 'next/link';
 import { useCart } from '@/context/CartContext';
@@ -8,7 +9,7 @@ interface Product {
   price: number;
   image: string;
   category: string;
-  variants?: Variant[]; // Added variants field
+  variants?: Variant[];
   stock: number;
 }
 
@@ -33,28 +34,42 @@ const ProductCard = ({ product }: { product: Product }) => {
   };
 
   return (
-    <div className="border rounded-lg p-4 shadow-lg">
-      <Link href={`/products/${product.id}`}>
-        <img src={product.image} alt={product.name} className="w-full h-48 object-cover rounded-t-lg cursor-pointer" />
-      </Link>
-      <div className="p-4">
-        <h2 className="text-xl font-bold">{product.name}</h2>
-        <p className="text-gray-500">${product.price.toFixed(2)}</p>
-        <Link href={`/products/${product.id}`} className="text-brand-primary hover:underline mt-2 inline-block">
-          View Details
+    <div className="border border-gray-200 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow bg-white flex flex-col justify-between">
+      <div>
+        <Link href={`/products/${product.id}`} className="block overflow-hidden rounded-lg">
+          <img
+            src={product.image}
+            alt={`${product.name} - Curious Cart BD`}
+            className="w-full h-48 object-cover rounded-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+          />
         </Link>
-        <button
-          onClick={() => addToCart(product)}
-          className="mt-2 w-full bg-brand-success text-white py-2 rounded-md hover:bg-green-600"
-        >
-          Add to Cart
-        </button>
-        <button
-          onClick={handleAddToWishlist}
-          className="mt-2 w-full bg-brand-accent text-white py-2 rounded-md hover:bg-red-600"
-        >
-          Add to Wishlist
-        </button>
+        <div className="pt-4">
+          <span className="text-xs font-semibold text-brand-primary uppercase tracking-wider">
+            {product.category || 'Islamic Gift'}
+          </span>
+          <h2 className="text-xl font-bold mt-1 text-gray-800 line-clamp-1">{product.name}</h2>
+          <p className="text-xl font-bold text-gray-900 mt-2">৳{product.price.toFixed(0)} <span className="text-sm font-normal text-gray-500">BDT</span></p>
+        </div>
+      </div>
+
+      <div className="pt-4">
+        <Link href={`/products/${product.id}`} className="text-brand-primary font-semibold hover:underline block mb-3 text-sm">
+          বিস্তারিত দেখুন (View Details) &rarr;
+        </Link>
+        <div className="space-y-2">
+          <button
+            onClick={() => addToCart(product)}
+            className="w-full bg-brand-success hover:bg-green-600 text-white font-semibold py-2 px-4 rounded-lg transition-colors"
+          >
+            Add to Cart
+          </button>
+          <button
+            onClick={handleAddToWishlist}
+            className="w-full bg-gray-100 hover:bg-gray-200 text-gray-700 font-medium py-2 px-4 rounded-lg text-sm transition-colors"
+          >
+            Add to Wishlist
+          </button>
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,23 @@
+User-Agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/
+Disallow: /checkout
+Disallow: /profile
+Disallow: /login
+Disallow: /register
+
+User-Agent: GPTBot
+User-Agent: ChatGPT-User
+User-Agent: Google-Extended
+User-Agent: PerplexityBot
+User-Agent: ClaudeBot
+User-Agent: Applebot-Extended
+Allow: /
+Allow: /about
+Allow: /products
+Allow: /products/*
+Disallow: /admin/
+Disallow: /api/
+
+Sitemap: https://curiouscart.vercel.app/sitemap.xml

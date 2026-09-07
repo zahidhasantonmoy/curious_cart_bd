@@ -38,6 +38,7 @@ export default function Header() {
         </Link>
         <div>
           <Link href="/" className="mx-2 text-gray-800 hover:text-gray-600">Home</Link>
+          <Link href="/products" className="mx-2 text-gray-800 hover:text-gray-600">Products</Link>
           <Link href="/about" className="mx-2 text-gray-800 hover:text-gray-600">About Us</Link>
           <Link href="/cart" className="mx-2 text-gray-800 hover:text-gray-600">Cart</Link>
           {isLoggedIn ? (
