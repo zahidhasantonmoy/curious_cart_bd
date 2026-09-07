@@ -3,10 +3,11 @@
 
 import Link from 'next/link';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
+import { FaGlobe, FaGithub, FaLinkedin, FaXTwitter } from 'react-icons/fa6';
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800 text-white pt-12">
+    <footer className="bg-gray-800 text-white pt-12 pb-8">
       <div className="container mx-auto px-6">
         <div className="flex flex-wrap justify-between">
           <div className="w-full md:w-1/4 mb-8 md:mb-0">
@@ -56,6 +57,71 @@ export default function Footer() {
             <a href="https://facebook.com/curiouscartbd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaFacebook size={24} /></a>
             <a href="https://instagram.com/curiouscartbd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaInstagram size={24} /></a>
             <a href="https://twitter.com/curiouscartbd" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white"><FaTwitter size={24} /></a>
+          </div>
+        </div>
+
+        {/* Developer Credit Block */}
+        <div className="mt-6 border-t border-gray-700/60 pt-6 flex flex-col items-center text-center">
+          <p className="text-[11px] font-medium tracking-widest text-gray-400 uppercase">
+            DEVELOPED BY
+          </p>
+          <a
+            href="https://zahidhasantonmoy.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-1 text-sm font-bold text-white hover:text-gray-300 transition-colors"
+          >
+            Zahid Hasan Tonmoy
+          </a>
+          <p className="mt-0.5 text-xs text-gray-400">
+            MERN Full Stack Developer &amp; AI Agent Developer
+          </p>
+          <div className="flex items-center space-x-4 mt-2.5">
+            <a
+              href="https://zahidhasantonmoy.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Website"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <FaGlobe size={16} />
+            </a>
+            <a
+              href="https://github.com/zahidhasantonmoy"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="GitHub"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <FaGithub size={16} />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/zahidhasantonmoy/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="LinkedIn"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <FaLinkedin size={16} />
+            </a>
+            <a
+              href="https://www.facebook.com/zahidhasantonmoybd"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Facebook"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <FaFacebook size={16} />
+            </a>
+            <a
+              href="https://x.com/zahidhasan_bd"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="X"
+              className="text-gray-400 hover:text-white transition-colors"
+            >
+              <FaXTwitter size={16} />
+            </a>
           </div>
         </div>
       </div>
